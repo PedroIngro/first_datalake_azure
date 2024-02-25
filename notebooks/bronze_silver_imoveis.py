@@ -1,6 +1,5 @@
 # Databricks notebook source
 import pyspark.sql.functions as F
-# import pyspark.sql.types as T
 
 # COMMAND ----------
 
