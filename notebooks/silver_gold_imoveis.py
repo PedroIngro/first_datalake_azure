@@ -1,4 +1,8 @@
 # Databricks notebook source
+import pyspark.sql.functions as F
+
+# COMMAND ----------
+
 imoveis_delta = spark.read.format('delta').load('dbfs:/mnt/dados/silver/dataset_imoveis')
 
 # COMMAND ----------
