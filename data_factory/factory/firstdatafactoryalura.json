@@ -1,0 +1,9 @@
+{
+	"name": "firstdatafactoryalura",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8fe39031-d863-495c-a05f-2d82f0d677af",
+		"tenantId": "dfb66dc4-3f3c-492c-991d-727dbd1c89d4"
+	}
+}
