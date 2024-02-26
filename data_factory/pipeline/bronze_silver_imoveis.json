@@ -15,7 +15,13 @@
 						"referenceName": "bronze_silver_imoveis_notebook",
 						"type": "PipelineReference"
 					},
-					"waitOnCompletion": true
+					"waitOnCompletion": true,
+					"parameters": {
+						"tables": {
+							"value": "@pipeline().parameters.tables",
+							"type": "Expression"
+						}
+					}
 				}
 			}
 		],
