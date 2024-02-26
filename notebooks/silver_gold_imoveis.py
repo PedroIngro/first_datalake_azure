@@ -20,4 +20,4 @@ imoveis_final = imoveis_expanded.join(F.broadcast(endereco_expanded),
 # COMMAND ----------
 
 path = 'dbfs:/mnt/dados/gold/dataset_imoveis'
-imoveis_final.write.save(path = , format = 'delta', mode = 'overwrite')
+imoveis_final.write.save(path = path , format = 'delta', mode = 'overwrite')
