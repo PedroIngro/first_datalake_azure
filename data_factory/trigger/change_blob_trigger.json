@@ -18,7 +18,8 @@
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/261b6ce5-13c6-47e5-bc44-85617c49aecb/resourceGroups/my_resource_group/providers/Microsoft.Storage/storageAccounts/firstdatalakealura",
 			"events": [
-				"Microsoft.Storage.BlobCreated"
+				"Microsoft.Storage.BlobCreated",
+				"Microsoft.Storage.BlobDeleted"
 			]
 		}
 	}
