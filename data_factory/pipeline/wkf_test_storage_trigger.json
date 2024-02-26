@@ -11,6 +11,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "gold_trigger",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			}

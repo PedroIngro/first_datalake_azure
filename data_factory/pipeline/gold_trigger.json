@@ -1,0 +1,31 @@
+{
+	"name": "gold_trigger",
+	"properties": {
+		"activities": [
+			{
+				"name": "gold_trigger",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/gold_test_storage_trigger"
+				},
+				"linkedServiceName": {
+					"referenceName": "databricks_datafactory_link",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "workflows"
+		},
+		"annotations": []
+	}
+}
