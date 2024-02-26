@@ -45,6 +45,8 @@
 		"folder": {
 			"name": "workflows/imoveis"
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2024-02-26T07:50:08Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }
