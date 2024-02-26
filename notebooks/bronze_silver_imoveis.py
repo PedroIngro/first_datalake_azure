@@ -1,12 +1,5 @@
 # Databricks notebook source
 import pyspark.sql.functions as F
-import re
-import json
-
-# COMMAND ----------
-
-var_tables = json.loads(re.sub("\'", '\"', dbutils.widgets.get("tables")))
-print(var_tables)
 
 # COMMAND ----------
 
