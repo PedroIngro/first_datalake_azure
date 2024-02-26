@@ -347,12 +347,13 @@
 				],
 				"type": "BlobEventsTrigger",
 				"typeProperties": {
-					"blobPathBeginsWith": "/imoveis/blobs/silver/",
-					"blobPathEndsWith": "test_storage_trigger/year=2014",
+					"blobPathBeginsWith": "/imoveis/blobs/silver/test_storage_trigger/year=2014/",
+					"blobPathEndsWith": "parquet",
 					"ignoreEmptyBlobs": true,
 					"scope": "[parameters('change_blob_trigger_properties_typeProperties_scope')]",
 					"events": [
-						"Microsoft.Storage.BlobCreated"
+						"Microsoft.Storage.BlobCreated",
+						"Microsoft.Storage.BlobDeleted"
 					]
 				}
 			},
