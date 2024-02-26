@@ -1,9 +1,9 @@
 {
-	"name": "bronze_silver_imoveis_notebook",
+	"name": "silver_gold_imoveis_notebook",
 	"properties": {
 		"activities": [
 			{
-				"name": "bronze_silver_imoveis",
+				"name": "silver_gold_imoveis",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/bronze_silver_imoveis"
+					"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/silver_gold_imoveis"
 				},
 				"linkedServiceName": {
 					"referenceName": "databricks_datafactory_link",
@@ -24,7 +24,7 @@
 			}
 		],
 		"folder": {
-			"name": "silver"
+			"name": "gold"
 		},
 		"annotations": []
 	}

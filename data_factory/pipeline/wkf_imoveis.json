@@ -1,0 +1,50 @@
+{
+	"name": "wkf_imoveis",
+	"properties": {
+		"activities": [
+			{
+				"name": "bronze_to_silver_imoveis",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "bronze_silver_imoveis_notebook",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "silver_to_gold_imoveis",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "bronze_to_silver_imoveis",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "silver_gold_imoveis_notebook",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"folder": {
+			"name": "workflows/imoveis"
+		},
+		"annotations": []
+	}
+}
