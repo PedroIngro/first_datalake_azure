@@ -1,0 +1,25 @@
+{
+	"name": "auto_trigger_one_hour_imoveis",
+	"properties": {
+		"description": "Esse trigger rodará os pipelines a cada 1h ",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "bronze_silver_imoveis_notebook",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2024-02-26T04:50:00",
+				"timeZone": "E. South America Standard Time"
+			}
+		}
+	}
+}
