@@ -4,13 +4,20 @@
 		"description": "Esse trigger rodará os pipelines a cada 1h ",
 		"annotations": [],
 		"runtimeState": "Started",
-		"pipelines": [],
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "wkf_imoveis",
+					"type": "PipelineReference"
+				}
+			}
+		],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
 				"frequency": "Hour",
 				"interval": 1,
-				"startTime": "2024-02-26T04:50:00",
+				"startTime": "2024-02-26T04:51:00",
 				"timeZone": "E. South America Standard Time"
 			}
 		}
