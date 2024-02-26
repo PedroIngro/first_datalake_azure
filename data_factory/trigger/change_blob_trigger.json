@@ -1,0 +1,25 @@
+{
+	"name": "change_blob_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "wkf_test_storage_trigger",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/imoveis/blobs/silver/",
+			"blobPathEndsWith": "test_storage_trigger/year=2014",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/261b6ce5-13c6-47e5-bc44-85617c49aecb/resourceGroups/my_resource_group/providers/Microsoft.Storage/storageAccounts/firstdatalakealura",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}

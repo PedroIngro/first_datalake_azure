@@ -1,0 +1,23 @@
+{
+	"name": "wkf_test_storage_trigger",
+	"properties": {
+		"activities": [
+			{
+				"name": "wkf_test_storage_trigger",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"folder": {
+			"name": "workflows"
+		},
+		"annotations": []
+	}
+}
