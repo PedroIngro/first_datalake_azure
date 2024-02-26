@@ -20,7 +20,3 @@ kc_house_data_partition = kc_house_data_partition.withColumn('year', F.col('year
 sink = "dbfs:/mnt/dados/silver/test_storage_trigger"
 kc_house_data_partition.coalesce(1).write.partitionBy('year').save(path=sink, format="parquet", mode="overwrite")
 
-
-# COMMAND ----------
-
-
