@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "firstdatafactoryalura"
+		},
+		"databricks_datafactory_link_accessToken": {
+			"value": ""
+		},
+		"databricks_datafactory_link_properties_typeProperties_existingClusterId": {
+			"value": "0225-041927-ig8vfowe"
+		},
+		"change_blob_trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/261b6ce5-13c6-47e5-bc44-85617c49aecb/resourceGroups/my_resource_group/providers/Microsoft.Storage/storageAccounts/firstdatalakealura"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
