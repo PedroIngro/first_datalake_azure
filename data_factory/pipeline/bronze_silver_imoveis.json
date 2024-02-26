@@ -1,0 +1,32 @@
+{
+	"name": "bronze_silver_imoveis",
+	"properties": {
+		"activities": [
+			{
+				"name": "bronze_silver_imoveis",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "bronze_silver_imoveis_notebook",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"parameters": {
+			"tables": {
+				"type": "object",
+				"defaultValue": {
+					"origins": "miau"
+				}
+			}
+		},
+		"annotations": []
+	}
+}
