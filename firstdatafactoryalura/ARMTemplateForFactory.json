@@ -184,7 +184,7 @@
 			"properties": {
 				"description": "Esse trigger rodará os pipelines a cada 1h ",
 				"annotations": [],
-				"runtimeState": "Started",
+				"runtimeState": "Stopped",
 				"pipelines": [
 					{
 						"pipelineReference": {
