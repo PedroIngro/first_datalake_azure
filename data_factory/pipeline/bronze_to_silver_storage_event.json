@@ -1,6 +1,7 @@
 {
-	"name": "test_storage_trigger",
+	"name": "bronze_to_silver_storage_event",
 	"properties": {
+		"description": "Ainda em construção para test de Trigger de Evento",
 		"activities": [
 			{
 				"name": "test_storage_trigger",

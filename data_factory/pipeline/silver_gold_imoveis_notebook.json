@@ -1,6 +1,7 @@
 {
 	"name": "silver_gold_imoveis_notebook",
 	"properties": {
+		"description": "Pipeline simples para execução do notebook silver to gold imóveis",
 		"activities": [
 			{
 				"name": "silver_gold_imoveis",

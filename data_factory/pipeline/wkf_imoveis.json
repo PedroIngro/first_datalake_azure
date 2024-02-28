@@ -1,6 +1,7 @@
 {
 	"name": "wkf_imoveis",
 	"properties": {
+		"description": "Workflow com Trigger diário para criação das tabelas da silver até a gold.\nApenas para fins de aprendizado\n",
 		"activities": [
 			{
 				"name": "bronze_to_silver_imoveis",

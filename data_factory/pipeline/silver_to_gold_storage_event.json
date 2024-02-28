@@ -1,6 +1,7 @@
 {
-	"name": "gold_trigger",
+	"name": "silver_to_gold_storage_event",
 	"properties": {
+		"description": "Ainda em progresso para teste do storage event",
 		"activities": [
 			{
 				"name": "gold_trigger",
@@ -24,7 +25,7 @@
 			}
 		],
 		"folder": {
-			"name": "workflows"
+			"name": "test_storage_trigger_notebook"
 		},
 		"annotations": [],
 		"lastPublishTime": "2024-02-26T19:37:54Z"

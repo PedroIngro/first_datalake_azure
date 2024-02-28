@@ -12,7 +12,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"pipeline": {
-						"referenceName": "gold_trigger",
+						"referenceName": "silver_to_gold_storage_event",
 						"type": "PipelineReference"
 					},
 					"waitOnCompletion": true

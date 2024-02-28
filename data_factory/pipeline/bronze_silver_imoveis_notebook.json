@@ -1,6 +1,7 @@
 {
 	"name": "bronze_silver_imoveis_notebook",
 	"properties": {
+		"description": "Pipeline simples para execução do notebook bronze to silver imóveis",
 		"activities": [
 			{
 				"name": "bronze_silver_imoveis",
