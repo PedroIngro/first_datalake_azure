@@ -22,6 +22,8 @@
 		"folder": {
 			"name": "workflows"
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2024-02-26T19:37:54Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }
