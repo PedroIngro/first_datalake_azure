@@ -16,7 +16,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/imoveis/bronze_silver_imoveis"
+					"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/test_storage_trigger/bronze_silver_storage_trigger"
 				},
 				"linkedServiceName": {
 					"referenceName": "databricks_datafactory_link",
