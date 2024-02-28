@@ -4,12 +4,12 @@
 	"parameters": {
 		"factoryName": {
 			"type": "string",
-			"metadata": "Nome do Data Factory",
+			"metadata": "Data Factory name",
 			"defaultValue": "firstdatafactoryalura"
 		},
 		"databricks_datafactory_link_accessToken": {
 			"type": "secureString",
-			"metadata": "Cadeia de caracteres segura para 'accessToken' de 'databricks_datafactory_link'"
+			"metadata": "Secure string for 'accessToken' of 'databricks_datafactory_link'"
 		},
 		"databricks_datafactory_link_properties_typeProperties_existingClusterId": {
 			"type": "string",
@@ -29,6 +29,7 @@
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"description": "Pipeline simples para execução do notebook bronze to silver imóveis",
 				"activities": [
 					{
 						"name": "bronze_silver_imoveis",
@@ -43,7 +44,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/bronze_silver_imoveis"
+							"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/imoveis/bronze_silver_imoveis"
 						},
 						"linkedServiceName": {
 							"referenceName": "databricks_datafactory_link",
@@ -65,10 +66,11 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/gold_trigger')]",
+			"name": "[concat(parameters('factoryName'), '/silver_to_gold_storage_event')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"description": "Ainda em progresso para teste do storage event",
 				"activities": [
 					{
 						"name": "gold_trigger",
@@ -83,7 +85,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/gold_test_storage_trigger"
+							"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/test_storage_trigger/gold_test_storage_trigger"
 						},
 						"linkedServiceName": {
 							"referenceName": "databricks_datafactory_link",
@@ -95,9 +97,10 @@
 					"elapsedTimeMetric": {}
 				},
 				"folder": {
-					"name": "workflows"
+					"name": "test_storage_trigger_notebook"
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2024-02-26T19:37:54Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/databricks_datafactory_link')]"
@@ -108,6 +111,7 @@
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"description": "Pipeline simples para execução do notebook silver to gold imóveis",
 				"activities": [
 					{
 						"name": "silver_gold_imoveis",
@@ -122,7 +126,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/silver_gold_imoveis"
+							"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/imoveis/silver_gold_imoveis"
 						},
 						"linkedServiceName": {
 							"referenceName": "databricks_datafactory_link",
@@ -144,10 +148,11 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/test_storage_trigger')]",
+			"name": "[concat(parameters('factoryName'), '/bronze_to_silver_storage_event')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"description": "Ainda em construção para test de Trigger de Evento",
 				"activities": [
 					{
 						"name": "test_storage_trigger",
@@ -162,7 +167,7 @@
 						},
 						"userProperties": [],
 						"typeProperties": {
-							"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/test_storage_trigger"
+							"notebookPath": "/Repos/pedroingrogg@sempreceub.com/first_datalake_azure/notebooks/test_storage_trigger/bronze_silver_storage_trigger"
 						},
 						"linkedServiceName": {
 							"referenceName": "databricks_datafactory_link",
@@ -176,7 +181,8 @@
 				"folder": {
 					"name": "test_storage_trigger_notebook"
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2024-02-26T19:37:54Z"
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/databricks_datafactory_link')]"
@@ -187,6 +193,7 @@
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"description": "Workflow com Trigger diário para criação das tabelas da silver até a gold.\nApenas para fins de aprendizado\n",
 				"activities": [
 					{
 						"name": "bronze_to_silver_imoveis",
@@ -260,7 +267,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"pipeline": {
-								"referenceName": "gold_trigger",
+								"referenceName": "silver_to_gold_storage_event",
 								"type": "PipelineReference"
 							},
 							"waitOnCompletion": true,
@@ -274,10 +281,11 @@
 				"folder": {
 					"name": "workflows"
 				},
-				"annotations": []
+				"annotations": [],
+				"lastPublishTime": "2024-02-26T19:37:54Z"
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/gold_trigger')]"
+				"[concat(variables('factoryId'), '/pipelines/silver_to_gold_storage_event')]"
 			]
 		},
 		{

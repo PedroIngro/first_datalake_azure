@@ -4,12 +4,12 @@
 	"parameters": {
 		"factoryName": {
 			"type": "string",
-			"metadata": "Nome do Data Factory",
+			"metadata": "Data Factory name",
 			"defaultValue": "firstdatafactoryalura"
 		},
 		"databricks_datafactory_link_accessToken": {
 			"type": "secureString",
-			"metadata": "Cadeia de caracteres segura para 'accessToken' de 'databricks_datafactory_link'"
+			"metadata": "Secure string for 'accessToken' of 'databricks_datafactory_link'"
 		},
 		"databricks_datafactory_link_properties_typeProperties_existingClusterId": {
 			"type": "string",
@@ -21,11 +21,11 @@
 		},
 		"containerUri": {
 			"type": "string",
-			"metadata": "URI para a conta de armazenamento contendo os modelos do ARM vinculados"
+			"metadata": "URI to storage account containing linked ARM templates"
 		},
 		"containerSasToken": {
 			"type": "string",
-			"metadata": "Token SAS para a conta de armazenamento contendo modelos do ARM vinculados"
+			"metadata": "Sas token to storage account containing linked ARM templates"
 		}
 	},
 	"variables": {
